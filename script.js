@@ -1,11 +1,10 @@
-// simple scroll animation
-const elements = document.querySelectorAll('.fade');
+const reveals = document.querySelectorAll(".reveal");
 
-window.addEventListener('scroll', () => {
-  elements.forEach(el => {
-    const position = el.getBoundingClientRect().top;
-    if(position < window.innerHeight - 100){
-      el.classList.add('show');
+window.addEventListener("scroll", () => {
+  reveals.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if(top < window.innerHeight - 100){
+      el.classList.add("active");
     }
   });
 });
